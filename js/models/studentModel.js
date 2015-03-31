@@ -1,7 +1,7 @@
 var StudentModel = Backbone.Model.extend({
   idAttribute: 'name',
   defaults: {
-    name: "",
+    name: '',
   },
   parse: function (resp) {
     // Create a schedule object on model
@@ -11,8 +11,7 @@ var StudentModel = Backbone.Model.extend({
     });
     // Delete from the response object as the data is
     // already available on the model
-    //delete resp.schedule;
-
+    delete resp.schedule;
     return resp;
   }
 });

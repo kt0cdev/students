@@ -21,7 +21,7 @@ var StudentView = Backbone.View.extend({
   renderView: function(html){
     this.$el.append(html(_.extend(this.model.toJSON())));
   },
-  loadSchedules: function(){
+  loadSchedules: function(event){
     event.preventDefault()
     var mainview = this.mainview,
         schedules = this.model;
